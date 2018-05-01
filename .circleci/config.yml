@@ -22,11 +22,13 @@ jobs:
             git config --global user.email "victorsalaun@users.noreply.github.com"
             git config --global user.name "victorsalaun"
             echo "machine github.com login victorsalaun password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=victorsalaun yarn run publish-gh-pages
+            yarn install && GIT_USER=victorsalaun yarn run publish-gh-pages
 
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - deploy-website:
-#         filters: *filter-only-master
+        filters:
+          branches:
+            only: master
