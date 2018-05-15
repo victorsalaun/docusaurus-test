@@ -6,14 +6,12 @@ aliases:
   branches:
     only:
       - master
-
 version: 2
 jobs:
   deploy-website:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-
     steps:
       - checkout
       - run:
@@ -23,7 +21,6 @@ jobs:
             git config --global user.name "victorsalaun"
             echo "machine github.com login victorsalaun password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=victorsalaun yarn run publish-gh-pages
-
 workflows:
   version: 2
   build_and_deploy:
