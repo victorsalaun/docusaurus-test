@@ -22,7 +22,7 @@ const siteConfig = {
   title: 'Test Site' /* title for your website */,
   tagline: 'A website for testing',
   url: 'https://voyages-sncf-technologies.github.io/hesperides-documentation' /* your website url */,
-  baseUrl: 'http://voyages-sncf-technologies.github.io/hesperides-documentation/' /* base url for your project */,
+  baseUrl: 'https://voyages-sncf-technologies.github.io/hesperides-documentation/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
